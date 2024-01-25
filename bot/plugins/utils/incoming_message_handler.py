@@ -28,7 +28,7 @@ async def incoming_urls(client: TG, message: Message) -> None:
     _reply = await client.send_message(
         message.chat.id,
         f'**URL:** {url} is valid',
-        reply_to_message_id=message.message_id,
+        reply_to_message_id=message.id,
         disable_web_page_preview=True
     )
     file_download_path = await download_file(url, download_location, _reply)
