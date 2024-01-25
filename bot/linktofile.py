@@ -14,7 +14,7 @@ class TG(Client):
             bot_token=BOT_TOKEN,
             plugins=dict(root="bot/plugins"),
             sleep_threshold=60,
-            parse_mode="markdown"
+            parse_mode="MarkDownV2"
         )
 
     async def start(self):
